@@ -1,0 +1,50 @@
+{
+  "name": "coupon-wallet",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "husky": "^0.14.3",
+    "immutable": "^3.8.2",
+    "lint-staged": "^7.1.0",
+    "prettier": "^1.12.1",
+    "react": "^16.3.2",
+    "react-app-rewire-eslint": "^0.2.3",
+    "react-dom": "^16.3.2",
+    "react-helmet": "^5.2.0",
+    "react-loadable": "^5.4.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "recompose": "^0.27.0",
+    "redux": "^4.0.0",
+    "redux-saga": "^0.16.0",
+    "reselect": "^3.0.1",
+    "styled-components": "^3.2.6"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "react-app-rewired": "^1.5.2"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  }
+}
