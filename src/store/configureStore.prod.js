@@ -3,19 +3,17 @@ import createSagaMiddleware from 'redux-saga';
 
 import rootReducer from './reducers';
 
-function configureStore(initialState) {
+const configureStore = preloadState => {
   const middleware = [
     createSagaMiddleware()
   ];
   const store = createStore(
     rootReducer,
-    initialState,
+    preloadState,
     applyMiddleware(...middleware)
   );
 
   return store;
-}
+};
 
-const store = configureStore();
-
-export default store;
+export default configureStore;
